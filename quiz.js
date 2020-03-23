@@ -16,7 +16,7 @@ let questions = [
     {
         question: "What does HTML stand for?",
         imgSrc: "img/html.png",
-        choiceA: "Correct",
+        choiceA: "Hypertex Markup Language",
         choiceB: "Wrong",
         choiceC: "Wrong",
         correct: "A"
@@ -24,7 +24,7 @@ let questions = [
         question: "What does CSS stand for?",
         imgSrc: "img/css.png",
         choiceA: "Wrong",
-        choiceB: "Correct",
+        choiceB: "Cascading Style Sheets",
         choiceC: "Wrong",
         correct: "B"
     }, {
@@ -32,7 +32,7 @@ let questions = [
         imgSrc: "img/js.png",
         choiceA: "Wrong",
         choiceB: "Wrong",
-        choiceC: "Correct",
+        choiceC: "Javascript",
         correct: "C"
     }
 ];
