@@ -17,21 +17,21 @@ let questions = [
         question: "What does HTML stand for?",
         imgSrc: "img/html.png",
         choiceA: "Hypertex Markup Language",
-        choiceB: "Wrong",
-        choiceC: "Wrong",
+        choiceB: "Hopefully the Magic Language",
+        choiceC: "Higher Than My Language",
         correct: "A"
     }, {
         question: "What does CSS stand for?",
         imgSrc: "img/css.png",
-        choiceA: "Wrong",
+        choiceA: "Calculating Setup Style",
         choiceB: "Cascading Style Sheets",
-        choiceC: "Wrong",
+        choiceC: "Cool Styles",
         correct: "B"
     }, {
         question: "What does JS stand for?",
         imgSrc: "img/js.png",
-        choiceA: "Wrong",
-        choiceB: "Wrong",
+        choiceA: "Justscript",
+        choiceB: "Java",
         choiceC: "Javascript",
         correct: "C"
     }
@@ -151,16 +151,3 @@ function scoreRender() {
     scoreDiv.innerHTML = "<img src=" + img + ">";
     scoreDiv.innerHTML += "<p>" + scorePerCent + "%</p>";
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
