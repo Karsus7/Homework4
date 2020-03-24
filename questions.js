@@ -1,4 +1,4 @@
-[
+var {
     {
         "question": "Inside which HTML element do we put JavaScript?",
         "choice1": "<script>",
@@ -23,4 +23,4 @@
         "choice4": "alert('Hello World');",
         "answer": 4
     }
-]
+}

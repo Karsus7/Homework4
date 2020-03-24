@@ -1,21 +1,18 @@
-const question = document.getElementById("question");
-const choices = Array.from(document.getElementsByClassName("choice-text"));
-const progressText = document.getElementById("progressText");
-const scoreText = document.getElementById("score");
-const progressBarFull = document.getElementById("progressBarFull");
-const loader = document.getElementById("loader");
-const game = document.getElementById("game");
-let currentQuestion = {};
-let acceptingAnswers = false;
-let score = 0;
-let questionCounter = 0;
-let availableQuesions = [];
+var question = document.getElementById("question");
+var choices = Array.from(document.getElementsByClassName("choice-text"));
+var progressText = document.getElementById("progressText");
+var scoreText = document.getElementById("score");
+var progressBarFull = document.getElementById("progressBarFull");
+var loader = document.getElementById("loader");
+var game = document.getElementById("game");
+var currentQuestion = {};
+var acceptingAnswers = false;
+var score = 0;
+var questionCounter = 0;
+var availableQuesions = [];
 
 let questions = [];
 
-fetch(
-    "https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple"
-)
     .then(res => {
         return res.json();
     })
