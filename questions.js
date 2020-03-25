@@ -1,26 +1,17 @@
-var {
+var questions = [
     {
         "question": "Inside which HTML element do we put JavaScript?",
-        "choice1": "<script>",
-        "choice2": "<javascript>",
-        "choice3": "<js>",
-        "choice4": "<scripting>",
-        "answer": 1
+        "choices": ["<script>", "<javascript>", "<js>", "<scripting>"],
+        "answer": "<script>"
     },
     {
         "question": "What is the correct syntax for referring to an external script called 'xxx.js'?",
-        "choice1": "<script href='xxx.js'>",
-        "choice2": "<script name='xxx.js'>",
-        "choice3": "<script src='xxx.js'>",
-        "choice4": "<script file='xxx.js'>",
-        "answer": 3
+        "choices": ["<script href='xxx.js", "<script name='xxx.js'>", "<script src='xxx.js'>", "<script file='xxx.js'>"],
+        "answer": "<script src='xxx.js'>"
     },
     {
         "question": "How do you write 'Hello World' in an alert?",
-        "choice1": "msgBox('Hello World');",
-        "choice2": "alertBox('Hello World');",
-        "choice3": "msg('Hello World');",
-        "choice4": "alert('Hello World');",
-        "answer": 4
+        "choices": ["msgBox('Hello World')", "alertBox('Hello World')", "msg('Hello World')", "alert('Hello World')"],
+        "answer": "alert('Hello World')"
     }
-}
+]
