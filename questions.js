@@ -15,3 +15,31 @@ var questions = [
         "answer": "alert('Hello World')"
     }
 ]
+
+// let questions = [
+//     {
+//         question : "Inside which HTML element do we put JavaScript?",
+//         imgSrc : "img/html.png",
+//         choiceA : "Correct",
+//         choiceB : "Wrong",
+//         choiceC : "Wrong",
+//         choiceD : "Wrong",
+//         correct : "A"
+//     },{
+//         question : "What is the correct syntax for referring to an external script called 'xxx.js'?",
+//         imgSrc : "img/css.png",
+//         choiceA : "Wrong",
+//         choiceB : "Correct",
+//         choiceC : "Wrong",
+//         choiceD : "Wrong",
+//         correct : "B"
+//     },{
+//         question : "How do you write 'Hello World' in an alert?",
+//         imgSrc : "img/js.png",
+//         choiceA : "Wrong",
+//         choiceB : "Wrong",
+//         choiceC : "Correct",
+//         choiceD : "Wrong",
+//         correct : "C"
+//     }
+// ]

@@ -13,28 +13,48 @@ var score = 0;
 var questionCounter = 0;
 var availableQuesions = [];
 var timerId;
-var time = question.length * 10;
-let questions = [];
+var time = (questions.length)* 10;
 var currentQuestionIndex = 0;
-function startQuiz(){
+
+//
+//
+//
+
+function startQuiz() {
     timerId = setInterval(clock, 1000);
     timerBtn.textContext = time;
     getQuestion();
 }
-function getQuestion() {
-        var currentQuestion = question[currentQuestionIndex];
-        var questionDisplay = document.getElementById('questions');
-        questionDisplay.textContent = currentQuestion.questionDisplay;
-        choices.innerHTML = " ";
-        currentQuestion.forEach(function(choice, i) {
-            var choiceN = document.createElement("button");
-            choiceN.setAttribute("class", "choice");
-            choiceN.setAttribute("value", choice);
-            choiceN.textContent = I + 1 + ". " + choice;
-            choiceN.onclick = questionClick;
-            choices.appendChild(choiceN);
-        });
+
+function clock(){
+    // console.log("called clock interval")
+    time --;
+    // console.log(time);
+    if(time <= 0){
+        alert("time has run out");
+        clearInterval(timerId);
+    }
 }
+
+function endGame(){
+    alert("game has ended");
+}
+
+function getQuestion() {
+    currentQuestion = questions[currentQuestionIndex];
+    questionDisplay.textContent = currentQuestion.question;
+    choices.innerHTML = " ";
+    currentQuestion.forEach(function (choice, i) {
+        var choiceN = document.createElement("button");
+        choiceN.setAttribute("class", "choice");
+        choiceN.setAttribute("value", choice);
+        choiceN.textContent = I + 1 + ". " + choice;
+        choiceN.onclick = questionClick;
+        choices.appendChild(choiceN);
+    });
+}
+
+
 //question click
 //function to end an reset game
 //stop timer
@@ -50,7 +70,10 @@ startGame = () => {
     game.classList.remove("hidden");
     loader.classList.add("hidden");
 };
-getNewQuestion = () => {
+
+
+
+function getNewQuestion (){
     if (availableQuesions.length === 0 || questionCounter >= MAX_QUESTIONS) {
         localStorage.setItem("mostRecentScore", score);
         return window.location.assign("/end.html");
@@ -86,6 +109,8 @@ choices.forEach(choice => {
         }, 1000);
     });
 });
+
+
 incrementScore = num => {
     score += num;
     scoreText.innerText = score;
@@ -121,3 +146,11 @@ saveHighScore = e => {
     localStorage.setItem("highScores", JSON.stringify(highScores));
     window.location.assign("/");
 };
+
+
+
+//##############################
+//######  Main Flow#############
+//##############################
+
+startQuiz
